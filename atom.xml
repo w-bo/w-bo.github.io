@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>w-bo</title>
+  
+  <subtitle>分享记录一些小知识</subtitle>
+  <link href="https://w-bo.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://w-bo.github.io/"/>
+  <updated>2023-02-09T12:15:26.988Z</updated>
+  <id>https://w-bo.github.io/</id>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo配置</title>
+    <link href="https://w-bo.github.io/2023/02/09/hexo%E9%85%8D%E7%BD%AE/"/>
+    <id>https://w-bo.github.io/2023/02/09/hexo%E9%85%8D%E7%BD%AE/</id>
+    <published>2023-02-09T12:15:26.000Z</published>
+    <updated>2023-02-09T12:15:26.988Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>面试问题合集</title>
+    <link href="https://w-bo.github.io/2023/02/02/%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98%E5%90%88%E9%9B%86/"/>
+    <id>https://w-bo.github.io/2023/02/02/%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98%E5%90%88%E9%9B%86/</id>
+    <published>2023-02-02T02:38:26.000Z</published>
+    <updated>2023-02-09T11:54:59.740Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li><p>权限管理怎样实现的？</p><p> 菜单权限，界面控制，按钮显隐的控制，请求与响应的控制；<br> 菜单权限：</p></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;权限管理怎样实现的？&lt;/p&gt;
+&lt;p&gt; 菜单权限，界面控制，按钮显隐的控制，请求与响应的控制；&lt;br&gt; 菜单权限：&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</summary>
+      
+    
+    
+    
+    <category term="随笔" scheme="https://w-bo.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+    <category term="面试" scheme="https://w-bo.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>markdown语法</title>
+    <link href="https://w-bo.github.io/2023/02/01/markdown%E8%AF%AD%E6%B3%95/"/>
+    <id>https://w-bo.github.io/2023/02/01/markdown%E8%AF%AD%E6%B3%95/</id>
+    <published>2023-02-01T14:20:00.000Z</published>
+    <updated>2023-02-09T08:18:35.710Z</updated>
+    
+    <content type="html"><![CDATA[<p>hh<br>你更新了？</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> (<span class="params"></span>)&#123;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;代码块&#x27;</span>)</span><br><span class="line">&#125;();</span><br></pre></td></tr></table></figure><p>滚动翻页1</p><p>滚动翻页2</p><p>滚动翻页3</p><p>滚动翻页4</p><p>滚动翻页5</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;hh&lt;br&gt;你更新了？&lt;/p&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;</summary>
+      
+    
+    
+    
+    <category term="随笔" scheme="https://w-bo.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+    <category term="语法" scheme="https://w-bo.github.io/tags/%E8%AF%AD%E6%B3%95/"/>
+    
+  </entry>
+  
+</feed>
