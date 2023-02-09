@@ -1,7 +1,8 @@
 ---
 title: markdown语法
 date: 2023-02-01 22:20:00
-tags:
+tags: 语法
+categories: 随笔
 ---
 
 hh
