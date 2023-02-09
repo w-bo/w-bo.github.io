@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>面试问题合集</title>
-    <url>/w-bo/w-bo.github.io/2023/02/02/%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98%E5%90%88%E9%9B%86/</url>
+    <url>/2023/02/02/%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98%E5%90%88%E9%9B%86/</url>
     <content><![CDATA[<ol>
 <li>权限管理怎样实现的？</li>
 </ol>
@@ -16,7 +16,7 @@
   </entry>
   <entry>
     <title>markdown语法</title>
-    <url>/w-bo/w-bo.github.io/2023/02/01/markdown%E8%AF%AD%E6%B3%95/</url>
+    <url>/2023/02/01/markdown%E8%AF%AD%E6%B3%95/</url>
     <content><![CDATA[<p>hh<br>你更新了？</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> (<span class="params"></span>)&#123;</span><br><span class="line">	<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;代码块&#x27;</span>)</span><br><span class="line">&#125;();</span><br></pre></td></tr></table></figure>
 
