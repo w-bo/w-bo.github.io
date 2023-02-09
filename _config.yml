@@ -4,10 +4,10 @@
 
 # Site
 title: w-bo
-subtitle: '分享创作一些小知识'
-description: ''
+subtitle: '分享记录一些小知识'
+description: '前端开发'
 keywords: 'html5，css3，javascript（es6），vue2/3，ts...'
-author: WangBo
+author: 
 language: zh-CN
 timezone: ''
 
