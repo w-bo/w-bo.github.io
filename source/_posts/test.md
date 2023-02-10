@@ -1,11 +1,17 @@
 ---
 title: test
-date: 2023-02-10 13:14:15
-tags:
+date: 2023-02-10 13:46:45
+tags: pic
 categories:
 ---
 
-图片二：
+图像三：
 
-![](../imgs/test/avatar-1676006188217.gif)
+![作者](./test/avatars.png)
+
+
+
+![作者](./test/avatar.gif)
+
+
 

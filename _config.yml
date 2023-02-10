@@ -40,8 +40,8 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-# 上传图片
-post_asset_folder: false
+# 上传图片 npm install https://github.com/CodeFalling/hexo-asset-image --save
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
