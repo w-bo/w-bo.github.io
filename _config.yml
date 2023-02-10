@@ -40,6 +40,7 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
+# 上传图片
 post_asset_folder: false
 relative_link: false
 future: true
