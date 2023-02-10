@@ -37,6 +37,11 @@
     <content><![CDATA[<p>图像三：</p>
 <p><img src="/2023/02/10/test/avatars.png" alt="作者"></p>
 <p><img src="/2023/02/10/test/avatar.gif" alt="作者"></p>
+<p>视频一：</p>
+<iframe src="//player.bilibili.com/player.html?aid=981742617&bvid=BV1qt4y1W7uF&cid=725326997&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+<p>链接：</p>
+<p>【Vue3 TS Pinia 使用全流程】 <a href="https://www.bilibili.com/video/BV1qt4y1W7uF/?share_source=copy_web&amp;vd_source=c2c18d251cad9ae9dbff27c9e243d4e1">https://www.bilibili.com/video/BV1qt4y1W7uF/?share_source=copy_web&amp;vd_source=c2c18d251cad9ae9dbff27c9e243d4e1</a></p>
 ]]></content>
       <tags>
         <tag>pic</tag>

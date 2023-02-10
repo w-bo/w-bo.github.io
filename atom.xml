@@ -6,7 +6,7 @@
   <link href="https://w-bo.github.io/atom.xml" rel="self"/>
   
   <link href="https://w-bo.github.io/"/>
-  <updated>2023-02-10T05:59:18.603Z</updated>
+  <updated>2023-02-10T06:21:29.218Z</updated>
   <id>https://w-bo.github.io/</id>
   
   <generator uri="https://hexo.io/">Hexo</generator>
@@ -16,9 +16,9 @@
     <link href="https://w-bo.github.io/2023/02/10/test/"/>
     <id>https://w-bo.github.io/2023/02/10/test/</id>
     <published>2023-02-10T05:46:45.000Z</published>
-    <updated>2023-02-10T05:59:18.603Z</updated>
+    <updated>2023-02-10T06:21:29.218Z</updated>
     
-    <content type="html"><![CDATA[<p>图像三：</p><p><img src="/2023/02/10/test/avatars.png" alt="作者"></p><p><img src="/2023/02/10/test/avatar.gif" alt="作者"></p>]]></content>
+    <content type="html"><![CDATA[<p>图像三：</p><p><img src="/2023/02/10/test/avatars.png" alt="作者"></p><p><img src="/2023/02/10/test/avatar.gif" alt="作者"></p><p>视频一：</p><iframe src="//player.bilibili.com/player.html?aid=981742617&bvid=BV1qt4y1W7uF&cid=725326997&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><p>链接：</p><p>【Vue3 TS Pinia 使用全流程】 <a href="https://www.bilibili.com/video/BV1qt4y1W7uF/?share_source=copy_web&amp;vd_source=c2c18d251cad9ae9dbff27c9e243d4e1">https://www.bilibili.com/video/BV1qt4y1W7uF/?share_source=copy_web&amp;vd_source=c2c18d251cad9ae9dbff27c9e243d4e1</a></p>]]></content>
     
     
       
@@ -26,7 +26,8 @@
     <summary type="html">&lt;p&gt;图像三：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/2023/02/10/test/avatars.png&quot; alt=&quot;作者&quot;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/2023/02/10/test/avatar.gif&quot; alt=&quot;作者&quot;&gt;&lt;/p&gt;
-</summary>
+&lt;p&gt;视频一：&lt;/p&gt;
+&lt;if</summary>
       
     
     
