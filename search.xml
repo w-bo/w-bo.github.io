@@ -4,8 +4,11 @@
     <title>hexo配置</title>
     <url>/2023/02/09/hexo%E9%85%8D%E7%BD%AE/</url>
     <content><![CDATA[<p>图像一：</p>
-<p><img src="/.io//imgs/hexo%E9%85%8D%E7%BD%AE/01-%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F-1676006022676.png"></p>
+<p><img src="/2023/02/09/hexo%E9%85%8D%E7%BD%AE/safari-pinned-tab.svg"></p>
 ]]></content>
+      <tags>
+        <tag>pic</tag>
+      </tags>
   </entry>
   <entry>
     <title>markdown语法</title>
@@ -32,10 +35,12 @@
     <title>test</title>
     <url>/2023/02/10/test/</url>
     <content><![CDATA[<p>图像三：</p>
-<p><img src="/.io//avatars.png" alt="作者"></p>
-<p><img src="/.io//avatar.gif" alt="作者"></p>
-<p><img src="/.io//01-%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.png"></p>
+<p><img src="/2023/02/10/test/avatars.png" alt="作者"></p>
+<p><img src="/2023/02/10/test/avatar.gif" alt="作者"></p>
 ]]></content>
+      <tags>
+        <tag>pic</tag>
+      </tags>
   </entry>
   <entry>
     <title>面试问题合集</title>

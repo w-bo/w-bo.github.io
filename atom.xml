@@ -6,7 +6,7 @@
   <link href="https://w-bo.github.io/atom.xml" rel="self"/>
   
   <link href="https://w-bo.github.io/"/>
-  <updated>2023-02-10T05:49:40.137Z</updated>
+  <updated>2023-02-10T05:59:18.603Z</updated>
   <id>https://w-bo.github.io/</id>
   
   <generator uri="https://hexo.io/">Hexo</generator>
@@ -16,21 +16,23 @@
     <link href="https://w-bo.github.io/2023/02/10/test/"/>
     <id>https://w-bo.github.io/2023/02/10/test/</id>
     <published>2023-02-10T05:46:45.000Z</published>
-    <updated>2023-02-10T05:49:40.137Z</updated>
+    <updated>2023-02-10T05:59:18.603Z</updated>
     
-    <content type="html"><![CDATA[<p>图像三：</p><p><img src="/.io//avatars.png" alt="作者"></p><p><img src="/.io//avatar.gif" alt="作者"></p><p><img src="/.io//01-%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.png"></p>]]></content>
+    <content type="html"><![CDATA[<p>图像三：</p><p><img src="/2023/02/10/test/avatars.png" alt="作者"></p><p><img src="/2023/02/10/test/avatar.gif" alt="作者"></p>]]></content>
     
     
       
       
     <summary type="html">&lt;p&gt;图像三：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/.io//avatars.png&quot; alt=&quot;作者&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/.io//avatar.gif&quot; alt=&quot;作者&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/.io//01-%E7%94%9F%E5%91</summary>
+&lt;p&gt;&lt;img src=&quot;/2023/02/10/test/avatars.png&quot; alt=&quot;作者&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2023/02/10/test/avatar.gif&quot; alt=&quot;作者&quot;&gt;&lt;/p&gt;
+</summary>
       
     
     
     
+    
+    <category term="pic" scheme="https://w-bo.github.io/tags/pic/"/>
     
   </entry>
   
@@ -39,20 +41,22 @@
     <link href="https://w-bo.github.io/2023/02/09/hexo%E9%85%8D%E7%BD%AE/"/>
     <id>https://w-bo.github.io/2023/02/09/hexo%E9%85%8D%E7%BD%AE/</id>
     <published>2023-02-09T12:15:26.000Z</published>
-    <updated>2023-02-10T05:14:00.406Z</updated>
+    <updated>2023-02-10T05:59:12.917Z</updated>
     
-    <content type="html"><![CDATA[<p>图像一：</p><p><img src="/.io//imgs/hexo%E9%85%8D%E7%BD%AE/01-%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F-1676006022676.png"></p>]]></content>
+    <content type="html"><![CDATA[<p>图像一：</p><p><img src="/2023/02/09/hexo%E9%85%8D%E7%BD%AE/safari-pinned-tab.svg"></p>]]></content>
     
     
       
       
     <summary type="html">&lt;p&gt;图像一：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/.io//imgs/hexo%E9%85%8D%E7%BD%AE/01-%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F-1676006022676.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2023/02/09/hexo%E9%85%8D%E7%BD%AE/safari-pinned-tab.svg&quot;&gt;&lt;/p&gt;
 </summary>
       
     
     
     
+    
+    <category term="pic" scheme="https://w-bo.github.io/tags/pic/"/>
     
   </entry>
   
