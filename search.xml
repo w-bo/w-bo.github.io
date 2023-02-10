@@ -3,7 +3,8 @@
   <entry>
     <title>hexo配置</title>
     <url>/2023/02/09/hexo%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<p><img src="../imgs/$%7Bfiilename%7D/01-%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.png"></p>
+    <content><![CDATA[<p>图像一：</p>
+<p><img src="/.io//imgs/hexo%E9%85%8D%E7%BD%AE/01-%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.png"></p>
 ]]></content>
   </entry>
   <entry>
@@ -25,6 +26,16 @@
       </categories>
       <tags>
         <tag>语法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>test</title>
+    <url>/2023/02/10/test/</url>
+    <content><![CDATA[<p>图片二：</p>
+<p><img src="/.io//%E5%9B%BE%E7%89%872.png"></p>
+]]></content>
+      <tags>
+        <tag>图片</tag>
       </tags>
   </entry>
   <entry>

@@ -6,24 +6,49 @@
   <link href="https://w-bo.github.io/atom.xml" rel="self"/>
   
   <link href="https://w-bo.github.io/"/>
-  <updated>2023-02-10T04:48:17.426Z</updated>
+  <updated>2023-02-10T05:06:31.556Z</updated>
   <id>https://w-bo.github.io/</id>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>test</title>
+    <link href="https://w-bo.github.io/2023/02/10/test/"/>
+    <id>https://w-bo.github.io/2023/02/10/test/</id>
+    <published>2023-02-10T04:56:02.000Z</published>
+    <updated>2023-02-10T05:06:31.556Z</updated>
+    
+    <content type="html"><![CDATA[<p>图片二：</p><p><img src="/.io//%E5%9B%BE%E7%89%872.png"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;图片二：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/.io//%E5%9B%BE%E7%89%872.png&quot;&gt;&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+    <category term="图片" scheme="https://w-bo.github.io/tags/%E5%9B%BE%E7%89%87/"/>
+    
+  </entry>
   
   <entry>
     <title>hexo配置</title>
     <link href="https://w-bo.github.io/2023/02/09/hexo%E9%85%8D%E7%BD%AE/"/>
     <id>https://w-bo.github.io/2023/02/09/hexo%E9%85%8D%E7%BD%AE/</id>
     <published>2023-02-09T12:15:26.000Z</published>
-    <updated>2023-02-10T04:48:17.426Z</updated>
+    <updated>2023-02-10T05:03:19.136Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="../imgs/$%7Bfiilename%7D/01-%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.png"></p>]]></content>
+    <content type="html"><![CDATA[<p>图像一：</p><p><img src="/.io//imgs/hexo%E9%85%8D%E7%BD%AE/01-%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.png"></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;../imgs/$%7Bfiilename%7D/01-%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.png&quot;&gt;&lt;/p&gt;
+    <summary type="html">&lt;p&gt;图像一：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/.io//imgs/hexo%E9%85%8D%E7%BD%AE/01-%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.png&quot;&gt;&lt;/p&gt;
 </summary>
       
     
