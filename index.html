@@ -190,6 +190,97 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://w-bo.github.io/2023/02/17/%E9%AB%98%E9%A2%91%E9%9D%A2%E8%AF%95%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.svg">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="前端开发">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="w-bo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/02/17/%E9%AB%98%E9%A2%91%E9%9D%A2%E8%AF%95%E9%A2%98/" class="post-title-link" itemprop="url">高频面试题</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-02-17 16:52:15 / 修改时间：19:54:42" itemprop="dateCreated datePublished" datetime="2023-02-17T16:52:15+08:00">2023-02-17</time>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.3k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="常见面试题："><a href="#常见面试题：" class="headerlink" title="常见面试题："></a>常见面试题：</h1><h2 id="一、JavaScript"><a href="#一、JavaScript" class="headerlink" title="一、JavaScript"></a>一、JavaScript</h2><h3 id="1、this的指向规则，arguments，全局变量和局部变量同名时的坑"><a href="#1、this的指向规则，arguments，全局变量和局部变量同名时的坑" class="headerlink" title="1、this的指向规则，arguments，全局变量和局部变量同名时的坑"></a>1、this的指向规则，arguments，全局变量和局部变量同名时的坑</h3><p>理解：</p>
+<p>​    this可以理解为指针，通常在函数<code>function</code>内部进行使用，当函数存在调用者是，此时this指向其的调用者，无调用者是指向<code>window</code>，<strong>注意</strong>：在严格模式<code>use  strict</code>下this指向的是<code>undefined</code>；箭头函数中的this指向其函数声明所在环境，也就是上下文。</p>
+<p>​    arguments意思是指函数的形参集合。</p>
+<p>​    全局变量：通常在函数外部所定义，拥有全局作用域；局部变量：定义在函数内部，只能在函数中进行访问，作用范围是在函数开始到结尾，即在 {} 里。在 <strong>ECMAScript 6</strong> 简称ES6之后，新增了块级作用域；所谓块级作用域就是使用 <code>let</code> 和 <code>const</code> 关键字声明的变量只在其所在的代码块 {} 内有效，在 {} 外不能访问，避免了 js 变量<strong>预解析</strong>的问题。当全局变量和局部变量同名时，<strong>全局变量是不会作用于同名局部变量的作用域的</strong>。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">全局变量的声明方式：</span><br><span class="line">	一、<span class="keyword">var</span> num = <span class="number">9</span>; <span class="comment">// 使用 var 关键字</span></span><br><span class="line">	二、num = <span class="number">9</span>; <span class="comment">// 没有使用 var 关键字声明，直接使用赋值的变量（无论函数内部还是外部）。</span></span><br><span class="line">局部变量的声明方式：</span><br><span class="line">	一、函数内部使用 <span class="keyword">var</span> 关键字进行使用的变量；</span><br><span class="line">		<span class="keyword">function</span> <span class="title function_">eg</span>(<span class="params"></span>) &#123;</span><br><span class="line">	      	text1 = <span class="string">&quot;我也是全局变量&quot;</span>; <span class="comment">// 没有使用 var 为全局变量</span></span><br><span class="line">			<span class="keyword">var</span> text2 = <span class="string">&quot;我是局部变量&quot;</span>;</span><br><span class="line">			<span class="variable language_">console</span>.<span class="title function_">log</span>(text2); <span class="comment">// 局部变量只能在函数中使用</span></span><br><span class="line">		&#125;</span><br><span class="line">全局变量局部变量同名：</span><br><span class="line">	<span class="keyword">var</span> a = <span class="string">&#x27;我是全局变量&#x27;</span>;</span><br><span class="line">	<span class="keyword">function</span> <span class="title function_">b</span>(<span class="params"></span>) &#123;</span><br><span class="line">		<span class="keyword">var</span> a = <span class="string">&#x27;我是局部变量&#x27;</span>;</span><br><span class="line">		<span class="variable language_">console</span>.<span class="title function_">log</span>(a) <span class="comment">// 局部变量</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="title function_">b</span>()</span><br><span class="line">	<span class="variable language_">console</span>.<span class="title function_">log</span>(a) <span class="comment">// 全局变量	</span></span><br></pre></td></tr></table></figure>
+
+<p>三道面试题：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> length = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">fn</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">length</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  <span class="attr">length</span>: <span class="number">100</span>,</span><br><span class="line">  <span class="attr">action</span>: <span class="keyword">function</span>(<span class="params">callback</span>) &#123;</span><br><span class="line">    <span class="title function_">callback</span>();</span><br><span class="line">		<span class="variable language_">arguments</span>[<span class="number">0</span>]();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</span><br><span class="line">obj.<span class="title function_">action</span>(fn, ...arr);</span><br><span class="line"><span class="comment">// 结果：1 5</span></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  <span class="attr">a</span>: <span class="number">99</span>,</span><br><span class="line">  <span class="attr">f</span>: test</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">test</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(a);</span><br><span class="line">  a = <span class="number">100</span>;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">a</span>);</span><br><span class="line">  <span class="keyword">var</span> a;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(a);</span><br><span class="line">&#125;</span><br><span class="line">obj.<span class="title function_">f</span>();</span><br><span class="line"><span class="comment">// 结果：undefined 99 100</span></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">f1</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">var</span> b = <span class="number">2</span> * a;</span><br><span class="line">  <span class="keyword">var</span> a = <span class="number">20</span>;</span><br><span class="line">  <span class="keyword">var</span> c = a + <span class="number">1</span>;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(b);</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(c);</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">f1</span>()</span><br><span class="line"><span class="comment">// 结果：NaN 21</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2、暂定"><a href="#2、暂定" class="headerlink" title="2、暂定"></a>2、暂定</h3>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://w-bo.github.io/2023/02/10/test/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -213,95 +304,15 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2023-02-10 13:46:45 / 修改时间：14:21:29" itemprop="dateCreated datePublished" datetime="2023-02-10T13:46:45+08:00">2023-02-10</time>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>142</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>图像三：</p>
-<p><img src="/2023/02/10/test/avatars.png" alt="作者"></p>
-<p><img src="/2023/02/10/test/avatar.gif" alt="作者"></p>
-<p>视频一：</p>
-<iframe src="//player.bilibili.com/player.html?aid=981742617&bvid=BV1qt4y1W7uF&cid=725326997&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
-<p>链接：</p>
-<p>【Vue3 TS Pinia 使用全流程】 <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1qt4y1W7uF/?share_source=copy_web&amp;vd_source=c2c18d251cad9ae9dbff27c9e243d4e1">https://www.bilibili.com/video/BV1qt4y1W7uF/?share_source=copy_web&amp;vd_source=c2c18d251cad9ae9dbff27c9e243d4e1</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://w-bo.github.io/2023/02/09/hexo%E9%85%8D%E7%BD%AE/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.svg">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="前端开发">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="w-bo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/02/09/hexo%E9%85%8D%E7%BD%AE/" class="post-title-link" itemprop="url">hexo配置</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-02-09 20:15:26" itemprop="dateCreated datePublished" datetime="2023-02-09T20:15:26+08:00">2023-02-09</time>
+              <time title="创建时间：2023-02-10 13:46:45" itemprop="dateCreated datePublished" datetime="2023-02-10T13:46:45+08:00">2023-02-10</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-02-10 13:59:12" itemprop="dateModified" datetime="2023-02-10T13:59:12+08:00">2023-02-10</time>
+                <time title="修改时间：2023-02-17 16:50:52" itemprop="dateModified" datetime="2023-02-17T16:50:52+08:00">2023-02-17</time>
               </span>
 
           <br>
@@ -310,7 +321,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>4</span>
+              <span>39</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -329,8 +340,12 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>图像一：</p>
-<p><img src="/2023/02/09/hexo%E9%85%8D%E7%BD%AE/safari-pinned-tab.svg"></p>
+          <p>hexo 上传图片的测试：</p>
+<p>图像一：<br><img src="/2023/02/10/test/safari-pinned-tab.svg" alt="作者"></p>
+<p>视频一：</p>
+<iframe src="//player.bilibili.com/player.html?aid=981742617&bvid=BV1qt4y1W7uF&cid=725326997&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+<p>链接：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1qt4y1W7uF/?share_source=copy_web&vd_source=c2c18d251cad9ae9dbff27c9e243d4e1">Vue3 TS Pinia 使用全流程</a></p>
 
       
     </div>
@@ -690,12 +705,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">2k</span>
+    <span title="站点总字数">3k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2 分钟</span>
+    <span title="站点阅读时长">3 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
   </div>
