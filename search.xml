@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>test</title>
-    <url>/2023/02/10/test/</url>
-    <content><![CDATA[<p>hexo 上传图片的测试：</p>
-<p>图像一：<br><img src="/2023/02/10/test/safari-pinned-tab.svg" alt="作者"></p>
-<p>视频一：</p>
-<iframe src="//player.bilibili.com/player.html?aid=981742617&bvid=BV1qt4y1W7uF&cid=725326997&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
-<p>链接：<a href="https://www.bilibili.com/video/BV1qt4y1W7uF/?share_source=copy_web&vd_source=c2c18d251cad9ae9dbff27c9e243d4e1">Vue3 TS Pinia 使用全流程</a></p>
-]]></content>
-      <tags>
-        <tag>pic</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>markdown语法</title>
     <url>/2023/02/01/markdown%E8%AF%AD%E6%B3%95/</url>
     <content><![CDATA[<p>hh<br>你更新了？</p>
@@ -33,6 +19,48 @@
       </categories>
       <tags>
         <tag>语法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>test</title>
+    <url>/2023/02/10/test/</url>
+    <content><![CDATA[<p>hexo 上传图片的测试：</p>
+<p>图像一：<br><img src="/2023/02/10/test/safari-pinned-tab.svg" alt="作者"></p>
+<p>视频一：</p>
+<iframe src="//player.bilibili.com/player.html?aid=981742617&bvid=BV1qt4y1W7uF&cid=725326997&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+<p>链接：<a href="https://www.bilibili.com/video/BV1qt4y1W7uF/?share_source=copy_web&vd_source=c2c18d251cad9ae9dbff27c9e243d4e1">Vue3 TS Pinia 使用全流程</a></p>
+]]></content>
+      <tags>
+        <tag>pic</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ts-学习</title>
+    <url>/2023/02/17/ts-%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<h2 id="一、Typescript"><a href="#一、Typescript" class="headerlink" title="一、Typescript"></a>一、Typescript</h2><h3 id="1、ts-介绍"><a href="#1、ts-介绍" class="headerlink" title="1、ts 介绍"></a>1、ts 介绍</h3><p>是什么？</p>
+<p>typescript 简称 ts，是 JavaScript 的超集。（JavaScript有的它都有）</p>
+<p>typescript = type + JavaScript，在 js 基础上增加了类型支持。</p>
+<p>typescript 是微软开发的开源编程语言，可以在 js 运行的地方运行。</p>
+<p><code>let age: number = 18</code></p>
+<p>解决了什么问题？有什么好处/优势？ </p>
+<p><img src="/2023/02/17/ts-%E5%AD%A6%E4%B9%A0/1676639577300.png" alt="ts 优势"></p>
+<ul>
+<li>减少改 bug、找 bug 的时间，提示开发效率。（理解于ts 、js 编程语言的机制）</li>
+<li>程序中的代码有代码提示，随时随地的安全感，谁不喜欢呢。</li>
+<li>强大的类型系统增加了代码的可维护性，使得更容易重构项目。</li>
+<li>类型推断机制，享受语言的优势，谁不爱？</li>
+<li>提供了强大的类型系统，大部分遵循 js 书写的习惯，同时也降低学习的成本。</li>
+</ul>
+<p>vue3 的源码使用 ts 进行重写，angular 默认支持 ts，react 与 ts 完美配合~中大型前端项目首选编程语言。</p>
+<p>怎么用？</p>
+<p>浏览器、node.js 默认只支持 js 语言，ts 语言需要经过编译后进行运行。</p>
+<p>① npm i -g tsc，tsc 模块包将 ts 代码编译成 js 代码，后可通过 node ××.js 进行运行。</p>
+<p>② npm i -g ts-node , ts-node 模块包，内部偷偷地将 ts 代码进行编译后运行。</p>
+<p>③ npm i -g nodemon，nodemon 工具包可以持续运行一个 js 文件，ts 文件应该也是可以的，我的电脑装了 nvm 管理多个 node 版本，可能是文件丢失，导致 ts-node 出现问题，也就执行不了 ts 文件。</p>
+<h3 id="2、ts-常用类型"><a href="#2、ts-常用类型" class="headerlink" title="2、ts 常用类型"></a>2、ts 常用类型</h3>]]></content>
+      <tags>
+        <tag>ts</tag>
       </tags>
   </entry>
   <entry>
