@@ -13,7 +13,7 @@ categories:
 
 ### 1、vite
 
-![what is vite？](Vue3-vite-pinia-axios-移动电商实战/what is vite？.png)
+![what is vite？](/Vue3+vite+pinia+axios-移动电商实战/vite.png)
 
 vite是一个web 开发构建工具，构建项目速度比webpack更快。
 
