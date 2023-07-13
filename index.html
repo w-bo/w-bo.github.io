@@ -190,6 +190,225 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://w-bo.github.io/2023/07/13/vue-%E6%8F%92%E6%A7%BD%E7%9A%84%E4%BD%BF%E7%94%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.svg">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="前端开发">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="w-bo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/07/13/vue-%E6%8F%92%E6%A7%BD%E7%9A%84%E4%BD%BF%E7%94%A8/" class="post-title-link" itemprop="url">vue-插槽的使用</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-07-13 14:57:32 / 修改时间：15:45:19" itemprop="dateCreated datePublished" datetime="2023-07-13T14:57:32+08:00">2023-07-13</time>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>4.4k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>4 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="一、什么是插槽？"><a href="#一、什么是插槽？" class="headerlink" title="一、什么是插槽？"></a>一、什么是插槽？</h1><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>插槽（Slots）是Vue.js中的一个重要概念，用于在组件中定义可插入内容的位置。它允许您在组件外部传递内容到组件内部，以实现更灵活的组件复用和组合。</p>
+<p>使用插槽，您可以在组件的模板中预留一些区域，然后在使用该组件时，通过插槽将内容传递进来。这样，您可以根据需要定制组件的部分或全部内容。</p>
+<p>下面是一个示例，展示了如何在Vue.js组件中使用插槽：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 父组件模板 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">child-component</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span>&gt;</span>这是父组件中的内容<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">child-component</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 子组件模板 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">slot</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>在上面的例子中，父组件使用<code>&lt;child-component&gt;</code>标签包裹了一段内容<code>&lt;p&gt;这是父组件中的内容&lt;/p&gt;</code>。这段内容将会被传递到子组件中。</p>
+<p>子组件中的<code>&lt;slot&gt;&lt;/slot&gt;</code>表示一个插槽，它标志着子组件的模板中的一个插入点。在使用子组件时，插入到这个插槽中的内容将会被显示。</p>
+<p>当父组件渲染时，子组件的插槽会将父组件传递的内容进行渲染，使得父组件中的内容可以动态地嵌入到子组件中。</p>
+<p>此外，您还可以为插槽提供默认内容，当没有传递内容时将会显示该默认内容。可以通过在子组件中使用<code>&lt;slot&gt;默认内容&lt;/slot&gt;</code>的方式定义默认内容。</p>
+<p>除了默认插槽之外，Vue.js还支持具名插槽和作用域插槽等更高级的插槽用法，使得插槽更加灵活和功能强大。但以上介绍的是插槽的基本用法，您可以根据需要进行更进一步的学习和实践。</p>
+<p>tips：值得注意的是</p>
+<blockquote>
+<p>在 2.6.0 中，我们为具名插槽和作用域插槽引入了一个新的统一的语法 (即 <code>v-slot</code> 指令)。它取代了 <code>slot</code> 和 <code>slot-scope</code> 这两个目前已被废弃但未被移除且仍在<a target="_blank" rel="noopener" href="https://v2.cn.vuejs.org/v2/guide/components-slots.html#%E5%BA%9F%E5%BC%83%E4%BA%86%E7%9A%84%E8%AF%AD%E6%B3%95">文档中</a>的 attribute。新语法的由来可查阅这份 <a target="_blank" rel="noopener" href="https://github.com/vuejs/rfcs/blob/master/active-rfcs/0001-new-slot-syntax.md">RFC</a>。</p>
+</blockquote>
+<h2 id="插槽的分类"><a href="#插槽的分类" class="headerlink" title="插槽的分类"></a>插槽的分类</h2><p>除了基本的插槽用法，Vue.js还提供了一些高级的插槽用法，包括具名插槽和作用域插槽。这些高级用法可以让您更加灵活地控制插槽内容的渲染和数据传递。</p>
+<ol>
+<li><p>具名插槽（Named Slots）：<br>具名插槽允许您在组件中定义多个插槽，并为每个插槽命名，以便更细粒度地控制插槽内容的插入位置。使用具名插槽，您可以在父组件中指定要插入到特定插槽位置的内容。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 子组件模板 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">slot</span> <span class="attr">name</span>=<span class="string">&quot;header&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">slot</span> <span class="attr">name</span>=<span class="string">&quot;content&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">slot</span> <span class="attr">name</span>=<span class="string">&quot;footer&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 父组件模板 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">child-component</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">template</span> <span class="attr">v-slot:header</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h1</span>&gt;</span>这是头部内容<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">template</span> <span class="attr">v-slot:content</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>这是主要内容<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">template</span> <span class="attr">v-slot:footer</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">footer</span>&gt;</span>这是底部内容<span class="tag">&lt;/<span class="name">footer</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">child-component</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>在上面的例子中，子组件中定义了三个具名插槽，分别是<code>header</code>、<code>content</code>和<code>footer</code>。在父组件中使用<code>v-slot</code>指令指定要插入到相应插槽的内容。</p>
+</li>
+<li><p>作用域插槽（Scoped Slots）：<br>作用域插槽允许您向插槽内容传递数据，并在父组件中使用该数据进行渲染。这样，您可以在父组件中对插槽内容进行更加细粒度的控制。</p>
+<p>以下是一个更具体的示例，展示了如何使用作用域插槽来自定义列表组件的渲染逻辑。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 子组件模板 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-for</span>=<span class="string">&quot;item in items&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">slot</span> <span class="attr">:item</span>=<span class="string">&quot;item&quot;</span>&gt;</span>&#123;&#123; item &#125;&#125;<span class="tag">&lt;/<span class="name">slot</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 父组件模板 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">child-component</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">template</span> <span class="attr">v-slot:item</span>=<span class="string">&quot;slotProps&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span>&gt;</span>&#123;&#123; slotProps.item &#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;deleteItem(slotProps.item)&quot;</span>&gt;</span>删除<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">child-component</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="language-javascript">  <span class="title function_">data</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">items</span>: [<span class="string">&#x27;苹果&#x27;</span>, <span class="string">&#x27;香蕉&#x27;</span>, <span class="string">&#x27;橙子&#x27;</span>]</span></span><br><span class="line"><span class="language-javascript">    &#125;;</span></span><br><span class="line"><span class="language-javascript">  &#125;,</span></span><br><span class="line"><span class="language-javascript">  <span class="attr">methods</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="title function_">deleteItem</span>(<span class="params">item</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="keyword">const</span> index = <span class="variable language_">this</span>.<span class="property">items</span>.<span class="title function_">indexOf</span>(item);</span></span><br><span class="line"><span class="language-javascript">      <span class="keyword">if</span> (index !== -<span class="number">1</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">this</span>.<span class="property">items</span>.<span class="title function_">splice</span>(index, <span class="number">1</span>);</span></span><br><span class="line"><span class="language-javascript">      &#125;</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript">  &#125;</span></span><br><span class="line"><span class="language-javascript">&#125;;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>在这个示例中，子组件是一个简单的列表组件，它接受一个名为<code>items</code>的数组作为数据源。在子组件的模板中，使用<code>v-for</code>遍历<code>items</code>数组，并为每个项目创建一个<code>&lt;li&gt;</code>元素。通过作用域插槽，我们将当前的<code>item</code>作为数据传递给插槽，并在插槽内容中使用<code>&#123;&#123; item &#125;&#125;</code>来渲染项目的文本内容。</p>
+<p>在父组件中，我们使用<code>child-component</code>来包裹列表组件，并在父组件的模板中使用作用域插槽来自定义每个列表项的渲染方式。在这个例子中，我们为每个列表项显示了一个文本<code>&lt;span&gt;</code>，并附加了一个删除按钮。通过作用域插槽，我们可以访问到每个列表项的数据，并在插槽内容中使用这些数据进行渲染和交互。</p>
+<p>父组件还定义了一个<code>deleteItem</code>方法，用于从列表中删除特定的项目。当点击删除按钮时，将调用该方法，并传递当前项目的数据作为参数。</p>
+<p>通过这个示例，您可以看到作用域插槽的强大之处。它使父组件能够对子组件的渲染逻辑进行更精细的控制，并且可以在插槽内容中与子组件进行交互。您可以根据实际需求使用作用域插槽来实现更复杂的自定义组件行为。</p>
+</li>
+</ol>
+<p>以上是插槽的一些高级用法，您可以根据需要使用具名插槽和作用域插槽来实现更灵活和可复用的组件。</p>
+<h2 id="插槽的动态用法"><a href="#插槽的动态用法" class="headerlink" title="插槽的动态用法"></a>插槽的动态用法</h2><p>插槽（Slots）在Vue.js中具有灵活的动态用法，您可以根据需要动态地定义和使用插槽。</p>
+<p>以下是一些插槽的动态用法示例：</p>
+<ol>
+<li><p>动态传递插槽名称、内容：</p>
+<p>在Vue.js中，v-slot指令可以与动态值进行绑定。这使得您可以在父组件中动态地确定要传递给子组件的插槽内容。</p>
+<p>下面是一个示例，展示了如何在父组件中使用动态值绑定v-slot：</p>
+<p>父组件模板：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">child-component</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">template</span> <span class="attr">v-slot:</span>[<span class="attr">slotName</span>]=<span class="string">&quot;slotProps&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>父组件传递的值为: &#123;&#123; slotProps.value &#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">child-component</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="language-javascript">  <span class="title function_">data</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">slotName</span>: <span class="string">&#x27;default&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript">  &#125;</span></span><br><span class="line"><span class="language-javascript">&#125;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>子组件模板：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">slot</span> <span class="attr">:value</span>=<span class="string">&quot;dynamicValue&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="language-javascript">  <span class="title function_">data</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">dynamicValue</span>: <span class="string">&#x27;这是一个动态的值&#x27;</span></span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript">  &#125;</span></span><br><span class="line"><span class="language-javascript">&#125;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>在上面的例子中，父组件使用动态值绑定v-slot指令的名称部分。这里的<code>[slotName]</code>表示slotName是一个动态的变量，它的值由父组件的data属性中的<code>slotName</code>确定。</p>
+<p>子组件中的插槽使用相同的动态值作为其名称部分，以便正确接收来自父组件的插槽内容。</p>
+<p>这样，您可以根据需要在父组件中动态地指定要传递给子组件的插槽内容，通过在父组件中更新<code>slotName</code>的值来实现动态绑定。</p>
+</li>
+</ol>
+<h2 id><a href="#" class="headerlink" title></a></h2>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://w-bo.github.io/2023/07/13/%E9%9A%8F%E7%AC%94%E6%95%B0%E7%BB%84/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.svg">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="前端开发">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="w-bo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/07/13/%E9%9A%8F%E7%AC%94%E6%95%B0%E7%BB%84/" class="post-title-link" itemprop="url">随笔数组</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-07-13 14:20:16 / 修改时间：14:53:56" itemprop="dateCreated datePublished" datetime="2023-07-13T14:20:16+08:00">2023-07-13</time>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="一、基础"><a href="#一、基础" class="headerlink" title="一、基础"></a>一、基础</h1><h1 id="二、进阶"><a href="#二、进阶" class="headerlink" title="二、进阶"></a>二、进阶</h1><h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><h3 id="reduce-方法讲解"><a href="#reduce-方法讲解" class="headerlink" title="reduce 方法讲解"></a>reduce 方法讲解</h3><p><code>reduce()</code>是JavaScript数组的一个高阶函数，用于对数组中的元素进行累积计算。它接受一个回调函数作为参数，并可以带有一个初始值。<code>reduce()</code>遍历数组的每个元素，将回调函数应用于累积值和当前元素，并返回最终的累积结果。</p>
+<p><code>reduce()</code>方法的语法如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array.<span class="title function_">reduce</span>(callback, initialValue)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><code>callback</code>是一个函数，它可以接受四个参数：</p>
+<ul>
+<li><code>accumulator</code>（累加器）：累积的值，也可以被称为上一次回调函数的返回值。</li>
+<li><code>currentValue</code>（当前值）：当前被处理的元素。</li>
+<li><code>currentIndex</code>（当前索引）：当前元素在数组中的索引（可选）。</li>
+<li><code>array</code>（原数组）：调用<code>reduce()</code>的数组（可选）。<br>回调函数需要返回一个值，用作下一次迭代的累积值。</li>
+</ul>
+</li>
+<li><p><code>initialValue</code>是可选的初始值，用作第一次调用回调函数时的累积值。如果不提供初始值，则将使用数组的第一个元素作为初始值，并从数组的第二个元素开始迭代。</p>
+</li>
+</ul>
+<p>下面是一个简单的示例，演示了如何使用<code>reduce()</code>方法计算数组的总和：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> numbers = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> sum = numbers.<span class="title function_">reduce</span>(<span class="function">(<span class="params">accumulator, currentValue</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> accumulator + currentValue;</span><br><span class="line">&#125;, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(sum); <span class="comment">// 输出：15</span></span><br></pre></td></tr></table></figure>
+
+<p>在上面的示例中，我们使用<code>reduce()</code>方法计算了数组<code>numbers</code>的总和。初始值为0，回调函数将累积值（<code>accumulator</code>）和当前值（<code>currentValue</code>）相加，并返回结果作为下一次迭代的累积值。最终，<code>sum</code>变量将包含数组元素的总和。</p>
+<p><code>reduce()</code>方法还可以用于其他类型的累积计算，例如查找最大值、最小值，计算平均值等。通过在回调函数中应用不同的逻辑，可以实现各种不同的累积操作。</p>
+<p>需要注意的是，<code>reduce()</code>方法不会修改原始数组，而是返回一个新的累积结果。</p>
+<p>总结一下，<code>reduce()</code>方法是JavaScript数组的一个高阶函数，用于对数组元素进行累积计算。它接受一个回调函数和可选的初始值作为参数，回调函数在每次迭代中将累积值和当前元素作为参数，并返回下一次迭代的累积值。通过使用不同的回调函数逻辑，可以实现各种累积操作，例如求和、查找最值等。</p>
+<p>。。。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://w-bo.github.io/2023/04/25/%E5%85%B3%E4%BA%8Ehttp%E7%9A%84%E4%BA%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -995,7 +1214,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1052,12 +1271,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">5k</span>
+    <span title="站点总字数">10k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">4 分钟</span>
+    <span title="站点阅读时长">9 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
   </div>
