@@ -5,9 +5,9 @@ tags: ts
 categories:
 ---
 
-## 一、Typescript
+## Typescript 是什么？
 
-### 1、ts 介绍
+### ts 介绍
 
 是什么？
 
@@ -16,6 +16,8 @@ typescript 简称 ts，是 JavaScript 的超集。（JavaScript有的它都有�
 typescript = type + JavaScript，在 js 基础上增加了类型支持。
 
 typescript 是微软开发的开源编程语言，可以在 js 运行的地方运行。
+
+<!-- more -->
 
 `let age: number = 18`
 
@@ -41,5 +43,7 @@ vue3 的源码使用 ts 进行重写，angular 默认支持 ts，react 与 ts �
 
 ③ npm i -g nodemon，nodemon 工具包可以持续运行一个 js 文件，ts 文件应该也是可以的，我的电脑装了 nvm 管理多个 node 版本，可能是文件丢失，导致 ts-node 出现问题，也就执行不了 ts 文件。
 
-### 2、ts 常用类型
+### ts 常用类型
+
+。。
 

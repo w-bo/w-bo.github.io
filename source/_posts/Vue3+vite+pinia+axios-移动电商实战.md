@@ -7,21 +7,23 @@ tags:
 categories:
 ---
 
-## 项目一：vue3+vite3+pinia+axios 移动电商实战
+## vue3+vite3+pinia+axios 移动电商实战
 
 项目来源：朝夕教育
 
-### 1、vite
+### 什么是 vite ？
 
 ![what is vite？](/Vue3+vite+pinia+axios-移动电商实战/vite.png)
 
 vite是一个web 开发构建工具，构建项目速度比webpack更快。
 
+<!-- more -->
+
 vite 常见配置：
 
+### pinia
 
 
-### 2、pinia
 
 
 

@@ -5,7 +5,7 @@ tags: 网络
 categories:
 ---
 
-# 一、web 的发展史
+# web 的发展史
 
 ## 为知识共享而规划 web
 
@@ -14,6 +14,8 @@ categories:
 CERN（欧洲核子研究组织）的蒂姆 • 伯纳斯 - 李（Tim BernersLee）博士提出了一种能让远隔两地的研究者们共享知识的设想。
 
 最初设想的基本理念是：借助多文档之间相互关联形成的超文本（HyperText），连成可相互参阅的 WWW（World Wide Web，万维网）。
+
+<!-- more -->
 
 ## web 成长阶段
 
