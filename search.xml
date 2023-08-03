@@ -31,6 +31,37 @@
       </tags>
   </entry>
   <entry>
+    <title>ts-学习</title>
+    <url>/2023/02/17/ts-%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<h2 id="Typescript-是什么？"><a href="#Typescript-是什么？" class="headerlink" title="Typescript 是什么？"></a>Typescript 是什么？</h2><h3 id="ts-介绍"><a href="#ts-介绍" class="headerlink" title="ts 介绍"></a>ts 介绍</h3><p>是什么？</p>
+<p>typescript 简称 ts，是 JavaScript 的超集。（JavaScript有的它都有）</p>
+<p>typescript = type + JavaScript，在 js 基础上增加了类型支持。</p>
+<p>typescript 是微软开发的开源编程语言，可以在 js 运行的地方运行。</p>
+<span id="more"></span>
+
+<p><code>let age: number = 18</code></p>
+<p>解决了什么问题？有什么好处/优势？ </p>
+<p><img src="/2023/02/17/ts-%E5%AD%A6%E4%B9%A0/1676639577300.png" alt="ts 优势"></p>
+<ul>
+<li>减少改 bug、找 bug 的时间，提示开发效率。（理解于ts 、js 编程语言的机制）</li>
+<li>程序中的代码有代码提示，随时随地的安全感，谁不喜欢呢。</li>
+<li>强大的类型系统增加了代码的可维护性，使得更容易重构项目。</li>
+<li>类型推断机制，享受语言的优势，谁不爱？</li>
+<li>提供了强大的类型系统，大部分遵循 js 书写的习惯，同时也降低学习的成本。</li>
+</ul>
+<p>vue3 的源码使用 ts 进行重写，angular 默认支持 ts，react 与 ts 完美配合~中大型前端项目首选编程语言。</p>
+<p>怎么用？</p>
+<p>浏览器、node.js 默认只支持 js 语言，ts 语言需要经过编译后进行运行。</p>
+<p>① npm i -g tsc，tsc 模块包将 ts 代码编译成 js 代码，后可通过 node ××.js 进行运行。</p>
+<p>② npm i -g ts-node , ts-node 模块包，内部偷偷地将 ts 代码进行编译后运行。</p>
+<p>③ npm i -g nodemon，nodemon 工具包可以持续运行一个 js 文件，ts 文件应该也是可以的，我的电脑装了 nvm 管理多个 node 版本，可能是文件丢失，导致 ts-node 出现问题，也就执行不了 ts 文件。</p>
+<h3 id="ts-常用类型"><a href="#ts-常用类型" class="headerlink" title="ts 常用类型"></a>ts 常用类型</h3><p>。。</p>
+]]></content>
+      <tags>
+        <tag>ts</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>vue-插槽的使用</title>
     <url>/2023/07/13/vue-%E6%8F%92%E6%A7%BD%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<h1 id="什么是插槽？"><a href="#什么是插槽？" class="headerlink" title="什么是插槽？"></a>什么是插槽？</h1><h2 id="简单介绍一下"><a href="#简单介绍一下" class="headerlink" title="简单介绍一下"></a>简单介绍一下</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>插槽（Slots）是Vue.js中的一个重要概念，用于在组件中定义可插入内容的位置。它允许您在组件外部传递内容到组件内部，以实现更灵活的组件复用和组合。</p>
@@ -145,37 +176,6 @@
       <tags>
         <tag>Vue2</tag>
         <tag>菜单、tagView</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ts-学习</title>
-    <url>/2023/02/17/ts-%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[<h2 id="Typescript-是什么？"><a href="#Typescript-是什么？" class="headerlink" title="Typescript 是什么？"></a>Typescript 是什么？</h2><h3 id="ts-介绍"><a href="#ts-介绍" class="headerlink" title="ts 介绍"></a>ts 介绍</h3><p>是什么？</p>
-<p>typescript 简称 ts，是 JavaScript 的超集。（JavaScript有的它都有）</p>
-<p>typescript = type + JavaScript，在 js 基础上增加了类型支持。</p>
-<p>typescript 是微软开发的开源编程语言，可以在 js 运行的地方运行。</p>
-<span id="more"></span>
-
-<p><code>let age: number = 18</code></p>
-<p>解决了什么问题？有什么好处/优势？ </p>
-<p><img src="/2023/02/17/ts-%E5%AD%A6%E4%B9%A0/1676639577300.png" alt="ts 优势"></p>
-<ul>
-<li>减少改 bug、找 bug 的时间，提示开发效率。（理解于ts 、js 编程语言的机制）</li>
-<li>程序中的代码有代码提示，随时随地的安全感，谁不喜欢呢。</li>
-<li>强大的类型系统增加了代码的可维护性，使得更容易重构项目。</li>
-<li>类型推断机制，享受语言的优势，谁不爱？</li>
-<li>提供了强大的类型系统，大部分遵循 js 书写的习惯，同时也降低学习的成本。</li>
-</ul>
-<p>vue3 的源码使用 ts 进行重写，angular 默认支持 ts，react 与 ts 完美配合~中大型前端项目首选编程语言。</p>
-<p>怎么用？</p>
-<p>浏览器、node.js 默认只支持 js 语言，ts 语言需要经过编译后进行运行。</p>
-<p>① npm i -g tsc，tsc 模块包将 ts 代码编译成 js 代码，后可通过 node ××.js 进行运行。</p>
-<p>② npm i -g ts-node , ts-node 模块包，内部偷偷地将 ts 代码进行编译后运行。</p>
-<p>③ npm i -g nodemon，nodemon 工具包可以持续运行一个 js 文件，ts 文件应该也是可以的，我的电脑装了 nvm 管理多个 node 版本，可能是文件丢失，导致 ts-node 出现问题，也就执行不了 ts 文件。</p>
-<h3 id="ts-常用类型"><a href="#ts-常用类型" class="headerlink" title="ts 常用类型"></a>ts 常用类型</h3><p>。。</p>
-]]></content>
-      <tags>
-        <tag>ts</tag>
       </tags>
   </entry>
   <entry>
