@@ -1,28 +1,16 @@
 @font-face {
   font-family: "iconfont"; /* Project id 4195641 */
-  src: url("iconfont.woff2?t=1691048621847") format("woff2"),
-    url("iconfont.woff?t=1691048621847") format("woff"),
-    url("iconfont.ttf?t=1691048621847") format("truetype");
+  src: url('iconfont.woff2?t=1691050127158') format('woff2'),
+       url('iconfont.woff?t=1691050127158') format('woff'),
+       url('iconfont.ttf?t=1691050127158') format('truetype');
 }
 
 .iconfont {
   font-family: "iconfont" !important;
-  /* font-size: 16px; */
+  font-size: 16px;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-wuneirong:before {
-  content: "\e6a6";
-}
-
-.icon-bilibili-line:before {
-  content: "\e75d";
-}
-
-.icon-gitee-fill-round:before {
-  content: "\e686";
 }
 
 .icon-bilibili:before {
@@ -32,3 +20,4 @@
 .icon-gitee:before {
   content: "\e60c";
 }
+
